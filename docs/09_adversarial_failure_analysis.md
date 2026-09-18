@@ -79,7 +79,7 @@ sequenceDiagram
     Bot->>WAF: Direct HTTP GET /api/programs (Datacenter IP + Python User-Agent)
     WAF-->>Bot: JA4 Fingerprint Mismatch + Datacenter ASN Detected
     WAF->>Bot: HTTP 403 Forbidden / Cloudflare Turnstile Challenge
-    Note over Bot: Execution Stalled; Target Missed; IP Blacklisted
+    Note over Bot: Execution Stalled - Target Missed - IP Blacklisted
 
     Note over Engine,Plat: AOAE Hardened Defense Architecture (Succeeds)
     Engine->>WAF: Residential Proxy Pool + Chrome 128 TLS Client Hello + Poisson Jitter

@@ -371,6 +371,18 @@ class TestTier3CrossFeatureLinksAndVisualIntegrity(unittest.TestCase):
                     f"Invalid Mermaid declaration in {file_path.relative_to(REPO_ROOT)}: '{lines[0]}'"
                 )
 
+                # Sequence diagram validation: bare semicolons in Note statements break Mermaid CLI (mmdc)
+                if first_line.startswith("sequencediagram"):
+                    for line in lines:
+                        if re.match(r"(?i)^note\s+", line):
+                            self.assertNotIn(
+                                ";",
+                                line,
+                                f"Bare semicolon found in sequenceDiagram Note in {file_path.relative_to(REPO_ROOT)}: '{line}'. "
+                                f"Semicolons act as statement delimiters in Mermaid sequence diagrams and break mmdc compilation. "
+                                f"Use hyphens (' - ') or commas (',') instead."
+                            )
+
                 # Lexical check for balanced delimiters
                 for open_char, close_char in [("(", ")"), ("[", "]"), ("{", "}")]:
                     # Ignore occurrences inside double quotes
