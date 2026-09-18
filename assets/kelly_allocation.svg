@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="auditGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="standingGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="zeroGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="560" fill="url(#bgGrad2)" rx="12" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Header -->
+  <text x="50" y="46" fill="#f8fafc" font-size="20" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Multi-Asset Fractional Kelly Capital &amp; Compute Allocation</text>
+  <text x="50" y="70" fill="#94a3b8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Quarter-Kelly (0.25 f*) Budget Allocation Schedule Governing Autonomous Execution Tiers</text>
+
+  <!-- Top Formula Card -->
+  <g transform="translate(50, 92)">
+    <rect width="900" height="54" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="32" fill="#38bdf8" font-size="13" font-family="monospace, sans-serif" font-weight="bold">Fractional Kelly Equation:</text>
+    <text x="245" y="32" fill="#f8fafc" font-size="13" font-family="monospace, sans-serif">f* = p - (1 - p) / b  |  f_allocated = max(0, 0.25 * f*)</text>
+    <text x="680" y="32" fill="#94a3b8" font-size="12" font-family="monospace, sans-serif">Safety Margin: 75% Drawdown Shield</text>
+  </g>
+
+  <!-- Macro Allocation Horizontal Bar Visualizer -->
+  <g transform="translate(50, 166)">
+    <text x="0" y="16" fill="#cbd5e1" font-size="13" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Active Portfolio Compute Dispatch (100% of Daily Compute Budget)</text>
+    
+    <!-- Outer Bar Container (width 900) -->
+    <rect x="0" y="28" width="900" height="42" rx="6" fill="#0d1526" stroke="#334155" stroke-width="1"/>
+
+    <!-- Audit Contests Segment: 65% = 585px -->
+    <rect x="0" y="28" width="585" height="42" rx="6" fill="url(#auditGrad)"/>
+    <text x="292" y="54" fill="#0f172a" font-size="14" font-weight="bold" font-family="monospace, sans-serif" text-anchor="middle">Audit Contests: 65% Allocation ($32.50/day)</text>
+
+    <!-- Standing Criticals Segment: 35% = 315px -->
+    <rect x="585" y="28" width="315" height="42" rx="0" fill="url(#standingGrad)"/>
+    <text x="742" y="54" fill="#0f172a" font-size="14" font-weight="bold" font-family="monospace, sans-serif" text-anchor="middle">Standing Criticals: 35% ($17.50/day)</text>
+  </g>
+
+  <!-- Detailed Regime Breakdown Cards (3 Cards Side-by-Side) -->
+
+  <!-- Card 1: Time-Bound Audit Contests (65%) -->
+  <g transform="translate(50, 260)">
+    <rect width="285" height="260" rx="10" fill="#131e32" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="285" height="38" rx="10" fill="#0284c7" fill-opacity="0.25"/>
+    <text x="20" y="25" fill="#38bdf8" font-size="14" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Audit Contests (Code4rena/Sherlock)</text>
+
+    <text x="20" y="65" fill="#94a3b8" font-size="11" font-family="monospace, sans-serif">PRIMARY ASSET CLASS</text>
+    <text x="20" y="90" fill="#38bdf8" font-size="24" font-weight="bold" font-family="monospace, sans-serif">65.0%</text>
+    <text x="100" y="88" fill="#94a3b8" font-size="12" font-family="monospace, sans-serif">Budget Sizing</text>
+
+    <line x1="20" y1="108" x2="265" y2="108" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="130" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Win Probability (p):</text>
+    <text x="265" y="130" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">35.0%</text>
+
+    <text x="20" y="152" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Payout Odds (b):</text>
+    <text x="265" y="152" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">52.0x</text>
+
+    <text x="20" y="174" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Unconstrained Kelly (f*):</text>
+    <text x="265" y="174" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">33.75%</text>
+
+    <text x="20" y="196" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Quarter Kelly (0.25 f*):</text>
+    <text x="265" y="196" fill="#38bdf8" font-size="11" font-weight="bold" font-family="monospace, sans-serif" text-anchor="end">8.44%</text>
+
+    <text x="20" y="218" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Triage Latency:</text>
+    <text x="265" y="218" fill="#10b981" font-size="11" font-family="monospace, sans-serif" text-anchor="end">3–7 Days</text>
+
+    <text x="20" y="240" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Strategic Function:</text>
+    <text x="265" y="240" fill="#94a3b8" font-size="10" font-family="monospace, sans-serif" text-anchor="end">High Velocity Turnover</text>
+  </g>
+
+  <!-- Card 2: Standing Criticals (35%) -->
+  <g transform="translate(358, 260)">
+    <rect width="285" height="260" rx="10" fill="#102521" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="0" y="0" width="285" height="38" rx="10" fill="#059669" fill-opacity="0.25"/>
+    <text x="20" y="25" fill="#34d399" font-size="14" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Standing Criticals (Immunefi)</text>
+
+    <text x="20" y="65" fill="#94a3b8" font-size="11" font-family="monospace, sans-serif">HIGH-CONVICTION POOL</text>
+    <text x="20" y="90" fill="#34d399" font-size="24" font-weight="bold" font-family="monospace, sans-serif">35.0%</text>
+    <text x="100" y="88" fill="#94a3b8" font-size="12" font-family="monospace, sans-serif">Budget Sizing</text>
+
+    <line x1="20" y1="108" x2="265" y2="108" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="130" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Win Probability (p):</text>
+    <text x="265" y="130" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">2.23%</text>
+
+    <text x="20" y="152" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Payout Odds (b):</text>
+    <text x="265" y="152" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">1,301.8x</text>
+
+    <text x="20" y="174" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Unconstrained Kelly (f*):</text>
+    <text x="265" y="174" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">2.16%</text>
+
+    <text x="20" y="196" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Quarter Kelly (0.25 f*):</text>
+    <text x="265" y="196" fill="#34d399" font-size="11" font-weight="bold" font-family="monospace, sans-serif" text-anchor="end">0.54%</text>
+
+    <text x="20" y="218" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Triage Latency:</text>
+    <text x="265" y="218" fill="#f59e0b" font-size="11" font-family="monospace, sans-serif" text-anchor="end">14–21 Days</text>
+
+    <text x="20" y="240" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Strategic Function:</text>
+    <text x="265" y="240" fill="#94a3b8" font-size="10" font-family="monospace, sans-serif" text-anchor="end">Outsized Payout Convexity</text>
+  </g>
+
+  <!-- Card 3: Negative-EV & Web2 Domains (0% - Hard Veto) -->
+  <g transform="translate(665, 260)">
+    <rect width="285" height="260" rx="10" fill="#251217" stroke="#f43f5e" stroke-width="1.5"/>
+    <rect x="0" y="0" width="285" height="38" rx="10" fill="#e11d48" fill-opacity="0.25"/>
+    <text x="20" y="25" fill="#f43f5e" font-size="14" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Negative-EV Domains (Web2)</text>
+
+    <text x="20" y="65" fill="#94a3b8" font-size="11" font-family="monospace, sans-serif">SUB-ZERO EXPECTATION</text>
+    <text x="20" y="90" fill="#f43f5e" font-size="24" font-weight="bold" font-family="monospace, sans-serif">0.0%</text>
+    <text x="90" y="88" fill="#fb7185" font-size="12" font-family="monospace, sans-serif">HARD SYSTEM VETO</text>
+
+    <line x1="20" y1="108" x2="265" y2="108" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="130" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Win Probability (p):</text>
+    <text x="265" y="130" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">0.07% (Sub-Noise)</text>
+
+    <text x="20" y="152" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Payout Odds (b):</text>
+    <text x="265" y="152" fill="#f8fafc" font-size="11" font-family="monospace, sans-serif" text-anchor="end">594.2x</text>
+
+    <text x="20" y="174" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Unconstrained Kelly (f*):</text>
+    <text x="265" y="174" fill="#f43f5e" font-size="11" font-weight="bold" font-family="monospace, sans-serif" text-anchor="end">-0.10% (NEGATIVE)</text>
+
+    <text x="20" y="196" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Quarter Kelly (0.25 f*):</text>
+    <text x="265" y="196" fill="#f43f5e" font-size="11" font-weight="bold" font-family="monospace, sans-serif" text-anchor="end">0.00% (Pruned)</text>
+
+    <text x="20" y="218" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Triage Latency:</text>
+    <text x="265" y="218" fill="#f43f5e" font-size="11" font-family="monospace, sans-serif" text-anchor="end">45–90 Days</text>
+
+    <text x="20" y="240" fill="#cbd5e1" font-size="11" font-family="monospace, sans-serif">Strategic Action:</text>
+    <text x="265" y="240" fill="#f43f5e" font-size="10" font-family="monospace, sans-serif" text-anchor="end">Subsystem 03 Pre-Filter Drop</text>
+  </g>
+</svg>
