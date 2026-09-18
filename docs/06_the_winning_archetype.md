@@ -14,7 +14,7 @@ Every other evaluated domain collapses when subjected to the requirements of the
 Web3 Smart Contract Security is the **sole archetype that simultaneously satisfies all four fundamental criteria of autonomous arbitrage**:
 1. **Completely Transparent, Immutable Execution Targets**: All target codebases, deployment bytecodes, compiler settings, and on-chain storage states are publicly indexed, permanent, and accessible via RPC without private authentication or enterprise procurement.
 2. **Deterministic Epistemic Verifiability ($\delta_{\text{local}} \equiv \delta_{\text{mainnet}}$)**: An autonomous agent can locally fork the target blockchain state, execute an exploit transaction sequence, and mathematically prove the existence of an invariant violation. This collapses pre-submission false positives to absolute zero ($\alpha = 0$).
-3. **High-Density Programmatic Standing Rewards**: Over $250M in annual liquidity is escrowed in smart contracts and protocol treasuries. Confirmed critical vulnerabilities command median payouts of **~$20,000** and maximum payouts exceeding **$10,000,000**, delivering a net expected value of **+$398.26 per evaluated target** and a **2,804% Return on Compute Invested (ROIC)**.
+3. **High-Density Programmatic Standing Rewards**: Over \$250M in annual liquidity is escrowed in smart contracts and protocol treasuries. Confirmed critical vulnerabilities command median payouts of **~\$20,000** and maximum payouts exceeding **\$10,000,000**, delivering a net expected value of **+\$398.26 per evaluated target** and a **2,804% Return on Compute Invested (ROIC)**.
 4. **Absolute Safe Harbor via Local Simulation**: The engine never transmits intrusive attack traffic to live production blockchain nodes. Discovery, fuzzing, symbolic execution, and invariant verification take place entirely within isolated local Docker containers running Anvil forks, providing complete immunity from the Computer Fraud and Abuse Act (CFAA) and international cybercrime statutes.
 
 ```mermaid
@@ -96,7 +96,7 @@ $$\mathcal{P}_{\text{price}}(s') \iff \left| \frac{\text{spotPrice}(s') - \text{
    $$\alpha = P(\mathcal{P}_{\text{violation}}(s'_{\text{local}}) = \text{TRUE} \mid \mathcal{P}_{\text{violation}}(s'_{\text{local}}) = \text{FALSE}) = 0$$
 
 6. **Contrast with the Web2 Epistemic Horizon**: In a Web2 web application, the production state transition function $\delta_{\text{prod}}$ and backend storage state $s_{\text{prod}}$ are hidden behind network interfaces. The autonomous agent possesses only a partial, noisy observation of HTTP status codes and headers $y \in \mathcal{Y}$:
-   $$y = g(s_{\text{prod}}, \text{HTTP\_Payload}) + \epsilon_{\text{WAF}}$$
+   $$y = g(s_{\text{prod}}, \text{HTTP-Payload}) + \epsilon_{\text{WAF}}$$
    The agent evaluates a heuristic proxy predicate $\hat{\mathcal{P}}(y) \approx \mathcal{P}_{\text{vuln}}$. Because $\hat{\mathcal{P}}$ is only statistically correlated with underlying vulnerability state, the Web2 false positive rate is strictly positive and large:
    $$\alpha_{\text{Web2}} = P(\hat{\mathcal{P}}(y) = 1 \mid \text{Vulnerability Non-Existent}) \in [0.40, 0.85]$$
    Furthermore, the acceptance of the submission is mediated by a human triager $H \in \{0, 1\}$ characterized by subjective noise $\beta$:
@@ -109,7 +109,7 @@ In Web2 bug hunting, the net financial return $R_{\text{Web2}}$ on a submitted c
 $$\text{Var}(R_{\text{Web2}}) = E[R^2] - (E[R])^2 \gg (E[R])^2$$
 Because $\text{Var}(R_{\text{Web2}})$ is orders of magnitude larger than its mean, automated Web2 bug hunting is statistically indistinguishable from a lottery with a negative drift.
 
-In Web3, conditional on the local Foundry test passing ($\mathcal{P}_{\text{violation}} = \text{TRUE}$), the probability of validity is $1.0$. The only remaining stochastic variables are the arrival time of competing submissions and contest pool distributions. The variance of validity collapses to zero:
+In Web3, conditional on the local Foundry test passing ($\mathcal{P}_{\text{violation}} = \text{TRUE}$), the probability of validity is \$1.0. The only remaining stochastic variables are the arrival time of competing submissions and contest pool distributions. The variance of validity collapses to zero:
 $$\text{Var}(\text{Validity} \mid \text{PoC Passes}) \equiv 0$$
 
 ---
@@ -144,7 +144,7 @@ Using verified 2024–2026 data from HackerOne’s *9th Edition Hacker-Powered S
 - $P(\text{accepted} \mid \text{unique automated}) = 0.35$: 65% of unique automated submissions are dismissed as Informational, Out of Scope, WAF-Mitigated, or Won't Fix.
 - $\bar{R} = \$1,090$: Realized arithmetic mean payout across HackerOne platform disclosures.
 - $C_{\text{compute}} = \$2.50$: Headless Chromium browser crawling, distributed proxy egress, and cloud VM compute.
-- $C_{\text{human}} = \$80.00$: 2.0 hours of human labor (@ $40/hr) reviewing scanner output, drafting reproduction prose, and debating with triagers.
+- $C_{\text{human}} = \$80.00$: 2.0 hours of human labor (@ \$40/hr) reviewing scanner output, drafting reproduction prose, and debating with triagers.
 
 #### Calculation:
 $$P(\text{monetization}) = 0.85 \times 0.04 \times 0.15 \times 0.35 = 0.001785 \quad (0.1785\% \text{ or 1 in 560 targets})$$
@@ -167,7 +167,7 @@ Using verified 2025–2026 ground truth from Immunefi, Sherlock, and Code4rena:
 - $P(\text{finding}) = 0.035$: Realistic hit rate for multi-agent LLM semantic invariant analysis combined with Slither static analysis and Foundry fuzzing.
 - $P(\text{unique}) = 0.65$: In competitive audit contests, prize pools are shared non-linearly; in standing bounties, novel protocol-specific logic flaws have low collision rates ($<35\%$).
 - $P(\text{accepted} \mid \text{deterministic local PoC passes}) = \mathbf{0.98}$: When accompanied by an executable Foundry fork test that cleanly asserts the state violation, counterparty rejection is virtually zero ($<2\%$).
-- $\bar{R} = \$18,500$: Blended average payout across confirmed Medium/High contest findings ($2,500–$8,000) and Immunefi Critical standing bounties ($20,000–$1,000,000+).
+- $\bar{R} = \$18,500$: Blended average payout across confirmed Medium/High contest findings (\$2,500–\$8,000) and Immunefi Critical standing bounties (\$20,000–\$1,000,000+).
 - $C_{\text{compute}} = \$14.20$: Comprehensive analysis using Claude 3.5 Sonnet / GPT-4o token inference (~1.2M tokens across AST parsing, hypothesis generation, and test synthesis) + Foundry Anvil local fork container execution.
 - $C_{\text{human}} = \$0.00$: 100% headless autonomous verification. The executable Foundry test is self-proving; zero prose argumentation is required.
 
@@ -194,13 +194,13 @@ $$\text{ROIC} = \frac{EV}{C_{\text{compute}}} \times 100\%$$
 ```mermaid
 graph LR
     subgraph Web2_Economics["Web2 Bug Bounties"]
-        W2_In["Compute Invested: $2.50"] --> W2_EV["Gross EV: $1.95"]
-        W2_EV --> W2_Out["Net EV: -$0.55 (Loss)"]
+        W2_In["Compute Invested: USD 2.50"] --> W2_EV["Gross EV: USD 1.95"]
+        W2_EV --> W2_Out["Net EV: -USD 0.55 (Loss)"]
     end
 
     subgraph Web3_Economics["Web3 Smart Contracts"]
-        W3_In["Compute Invested: $14.20"] --> W3_EV["Gross EV: $412.46"]
-        W3_EV --> W3_Out["Net EV: +$398.26 (2,804% ROIC)"]
+        W3_In["Compute Invested: USD 14.20"] --> W3_EV["Gross EV: USD 412.46"]
+        W3_EV --> W3_Out["Net EV: +USD 398.26 (2,804% ROIC)"]
     end
 
     style Web2_Economics fill:#fff0f0,stroke:#cc0000,stroke-width:2px
@@ -286,14 +286,14 @@ $$f_k^* = 0$$
 
 ### 4.3 The Fractional Kelly Implementation Schedule (65% / 35% / 0%)
 
-Full Kelly allocation maximizes long-run wealth but induces high short-term volatility and deep drawdowns (up to 50% capital drawdown with probability 0.50). In institutional asset management, a **Half-Kelly ($0.5\times$) or Fractional Kelly** strategy is standard practice to preserve capital and smooth the growth trajectory.
+Full Kelly allocation maximizes long-run wealth but induces high short-term volatility and deep drawdowns (up to 50% capital drawdown with probability 0.50). In institutional asset management, a **Half-Kelly (\$0.5\times$) or Fractional Kelly** strategy is standard practice to preserve capital and smooth the growth trajectory.
 
 When normalized across the engine’s active compute capacity, the portfolio optimizes into a **Dual-Asset Compute Schedule**:
 
 | Asset Class | Operational Target | Empirical Hit Rate ($p$) | Net Payout Odds ($b$) | Raw Kelly ($f^*$) | Normalized Compute Allocation | Strategic Function |
 |---|---|:---:|:---:|:---:|:---:|---|
-| **Track B: Audit Contests** | Sherlock, Code4rena, Cantina | ~40.0% | 61.22 | 0.390 | **65.0%** | **Baseline Recurring Cashflow**: Frequent weekly payouts ($2k–$10k), rapid liquidity, short 7–14 day cycle. |
-| **Track A: Standing Bounties** | Immunefi Criticals | ~2.23% | 1,301.82 | 0.022 | **35.0%** | **Asymmetric Tail Upside**: Multi-million dollar payouts ($100k–$1M+), low frequency, extreme economic density. |
+| **Track B: Audit Contests** | Sherlock, Code4rena, Cantina | ~40.0% | 61.22 | 0.390 | **65.0%** | **Baseline Recurring Cashflow**: Frequent weekly payouts (\$2k–\$10k), rapid liquidity, short 7–14 day cycle. |
+| **Track A: Standing Bounties** | Immunefi Criticals | ~2.23% | 1,301.82 | 0.022 | **35.0%** | **Asymmetric Tail Upside**: Multi-million dollar payouts (\$100k–\$1M+), low frequency, extreme economic density. |
 | **All Other Archetypes** | Web2, PRs, MEV, FinOps, Domains | <0.2% | <15.0 | $\le 0.000$ | **0.0%** | **Categorically Excluded**: Negative mathematical EV, structural barriers, or account deplatforming risk. |
 
 ```mermaid
@@ -322,15 +322,15 @@ flowchart TD
         B2 --> B3[Repo Context & AST Extraction]
         B3 --> B4[Concurrent Invariant Fuzzing Swarm]
         B4 --> B5[Deduplication Share Optimization]
-        B5 --> B6[Weekly Settlement: $2,000 - $15,000 / week]
+        B5 --> B6[Weekly Settlement: USD 2,000 - USD 15,000 / week]
     end
 
     subgraph Track_A["Track A: Standing Critical Bounties (Immunefi)"]
-        A1[Immunefi TVL & Program Ingestion] --> A2[Target Prioritization: TVL-at-Risk > $50M]
+        A1[Immunefi TVL & Program Ingestion] --> A2[Target Prioritization: TVL-at-Risk > USD 50M]
         A2 --> A3[Archival State Forking via Anvil]
         A3 --> A4[Deep Multi-Agent Invariant Synthesis]
         A4 --> A5[Local Exploit Validation: delta_local == delta_mainnet]
-        A5 --> A6[Asymmetric Payout: $20,000 - $1,000,000+]
+        A5 --> A6[Asymmetric Payout: USD 20,000 - USD 1,000,000+]
     end
 
     TrackB --> SettlementRail[(Unified Web3 Treasury: USDC / USDT / ETH)]
@@ -343,7 +343,7 @@ flowchart TD
 ```
 
 ### 5.1 Track A: Standing Critical Bounties (Immunefi)
-- **Target Selection**: Prioritizes protocols with TVL exceeding $50M and confirmed critical reward caps $\ge \$500,000$.
+- **Target Selection**: Prioritizes protocols with TVL exceeding \$50M and confirmed critical reward caps $\ge \$500,000$.
 - **Methodology**: Ingests deployed contract addresses directly from the blockchain; pulls verified source code from Etherscan/Sourcify; pins local Anvil forks to the latest finalized block.
 - **Hypothesis Engine**: Multi-agent LLM reasoning constructs deep protocol invariant graphs (e.g., balance conservation, lending pool solvency, flash-loan price manipulation resistance).
 - **Execution**: The local Anvil sandbox simulates multi-transaction exploit sequences. Upon detecting an invariant breach, the engine automatically formats an executable Foundry test script and transmits the encrypted advisory to the protocol via the Immunefi API.

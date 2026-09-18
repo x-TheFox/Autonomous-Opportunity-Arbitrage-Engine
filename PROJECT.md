@@ -27,8 +27,8 @@ The repository is organized into a modular multi-document architecture with high
 ├── scripts/
 │   └── simulate_economics.py                          # Interactive Python Monte Carlo Financial Simulator
 ├── tests/                                             # Dual-Track E2E & Unit Test Suite
-│   ├── test_simulator.py                              # Unit & Statistical Tests for Simulator
-│   ├── test_documentation_integrity.py                # Structural, Link, and Markdown Integrity Tests
+│   ├── test_simulator.py                              # Unit & Statistical Tests for Simulator (30 tests)
+│   ├── test_documentation_integrity.py                # Structural, Link, and Markdown Integrity Tests (28 tests)
 │   └── run_all_tests.sh                               # Full Test Suite Runner
 ├── TEST_INFRA.md                                      # E2E Test Suite Architecture & Methodology
 ├── TEST_READY.md                                      # E2E Test Suite Readiness Signal
@@ -48,7 +48,7 @@ The repository is organized into a modular multi-document architecture with high
 | F08 | Audit of 8 Alternative Payout Archetypes | Deep empirical audit across Web2, Web3, OSS Bounties, MEV, Decentralized AI, Cloud FinOps, Chargebacks, and Domain Catching. | M2 | Survey (R2) |
 | F09 | Master 28-Dimension Comparison Matrix | Quantitative benchmarking table spanning 6 vectors with exact numbers and zero placeholders. | M2 | Survey (R2) |
 | F10 | Deterministic Verification Theorem | Mathematical proof establishing why local state machine verification ($\delta_{\text{local}} \equiv \delta_{\text{mainnet}}$) eliminates triage noise. | M2 | Survey (R3) |
-| F11 | EV per Compute-Hour Proof | Quantitative proof establishing Web3's +$398.26/target net yield vs Web2's -$80.55/target loss. | M2 | Survey (R3) |
+| F11 | EV per Compute-Hour Proof | Quantitative proof establishing Web3's +\$398.26/target net yield vs Web2's -\$80.55/target loss. | M2 | Survey (R3) |
 | F12 | Multi-Asset Kelly Portfolio Model | Fractional Kelly Criterion formula and compute allocation schedule across competing opportunity types. | M2 | Survey (R3) |
 | F13 | 17 Subsystems Specification | Complete Input, Process, Output, Failure Modes, Data Stored, and Automation Level for all 17 subsystems. | M3 | Survey (R4) |
 | F14 | Decoupled Architecture (Brain vs Hands) | Formal architectural separation between high-level reasoning LLM and deterministic sandbox runtimes. | M3 | Survey (R4) |
@@ -57,7 +57,7 @@ The repository is organized into a modular multi-document architecture with high
 | F17 | 3-Tier Financial Schedules | Complete financial engineering schedules across Conservative, Base, and Upside scenarios (CapEx, OpEx, unit token costs, ROCS). | M4 | Survey (R5) |
 | F18 | Interactive Monte Carlo Financial Simulator | Python standard-library simulator (`scripts/simulate_economics.py`) supporting parameter flags, Monte Carlo runs, VaR, Sharpe, and SVG charts. | M4 | Survey (R5, R6) |
 | F19 | Adversarial Threat Model & Mitigations | Exhaustive failure mode analysis: platform ban waves, duplicate frontrunning, model degradation, cost spikes, legal shifts. | M5 | Survey (R5) |
-| F20 | 30-Day $250 Minimum Viable Experiment (MVE) | Step-by-step empirical validation protocol with week-by-week milestones and budget allocation. | M5 | Survey (R5) |
+| F20 | 30-Day \$250 Minimum Viable Experiment (MVE) | Step-by-step empirical validation protocol with week-by-week milestones and budget allocation. | M5 | Survey (R5) |
 | F21 | Quantitative Go/No-Go Decision Gates | Strict binary decision thresholds for falsifying assumptions prior to capital commitment. | M5 | Survey (R5) |
 | F22 | Master Executive Gateway (README.md) | High-impact GitHub repository README with executive summary, badges, quickstart, system diagram, and document directory. | M5 | Survey (R6) |
 | F23 | Programmatic Vector Graphics (`assets/`) | High-resolution SVG charts generated for EV comparisons, Kelly allocation, and financial sensitivity curves. | M5 | Survey (R6) |
@@ -67,13 +67,13 @@ The repository is organized into a modular multi-document architecture with high
 ## Milestones
 | # | Name | Scope | Dependencies | Status |
 |---|------|-------|-------------|--------|
-| **E2E** | **E2E Testing Track** | Test infra (`TEST_INFRA.md`), test cases (Tiers 1-4 in `tests/`), runner (`run_all_tests.sh`), and `TEST_READY.md`. | none | IN_PROGRESS |
-| **M1** | **Strategic Teardown & Bounty Economics** | `docs/01_executive_verdict.md`, `docs/02_pdf_thesis_teardown.md`, `docs/03_bounty_economics_and_probabilistic_model.md` | none | IN_PROGRESS |
-| **M2** | **28-Dimension Ecosystem Benchmarking & Winning Archetype** | `docs/04_alternative_payout_ecosystems.md`, `docs/05_quantitative_comparison_matrix.md`, `docs/06_the_winning_archetype.md` | none | PLANNED |
-| **M3** | **17-Subsystem Engine Architecture & Diagrams** | `docs/07_autonomous_system_architecture.md` (full 17 subsystems, 4 Mermaid diagrams) | M1, M2 | PLANNED |
-| **M4** | **Financial Engineering Models & Monte Carlo Simulator** | `docs/08_financial_engineering_model.md`, `scripts/simulate_economics.py` | M2, M3 | PLANNED |
-| **M5** | **Adversarial Failure Analysis, MVE Blueprint & Gateway** | `docs/09_adversarial_failure_analysis.md`, `docs/10_mvp_validation_and_decision_gates.md`, `README.md`, `assets/*.svg` | M1, M2, M3, M4 | PLANNED |
-| **M6** | **E2E Test Verification (Tiers 1-4) & Adversarial Hardening (Tier 5)** | Execute 100% passing E2E test suite, run Tier 5 adversarial tests, verify forensic audit | E2E, M1-M5 | PLANNED |
+| **E2E** | **E2E Testing Track** | Test infra (`TEST_INFRA.md`), test cases (Tiers 1-4 in `tests/`), runner (`run_all_tests.sh`), and `TEST_READY.md`. | none | DONE |
+| **M1** | **Strategic Teardown & Bounty Economics** | `docs/01_executive_verdict.md`, `docs/02_pdf_thesis_teardown.md`, `docs/03_bounty_economics_and_probabilistic_model.md` | none | DONE |
+| **M2** | **28-Dimension Ecosystem Benchmarking & Winning Archetype** | `docs/04_alternative_payout_ecosystems.md`, `docs/05_quantitative_comparison_matrix.md`, `docs/06_the_winning_archetype.md` | none | DONE |
+| **M3** | **17-Subsystem Engine Architecture & Diagrams** | `docs/07_autonomous_system_architecture.md` (full 17 subsystems, 4 Mermaid diagrams) | M1, M2 | DONE |
+| **M4** | **Financial Engineering Models & Monte Carlo Simulator** | `docs/08_financial_engineering_model.md`, `scripts/simulate_economics.py` | M2, M3 | DONE |
+| **M5** | **Adversarial Failure Analysis, MVE Blueprint & Gateway** | `docs/09_adversarial_failure_analysis.md`, `docs/10_mvp_validation_and_decision_gates.md`, `README.md`, `assets/*.svg` | M1, M2, M3, M4 | DONE |
+| **M6** | **E2E Test Verification (Tiers 1-4) & Adversarial Hardening (Tier 5)** | Execute 100% passing E2E test suite, run Tier 5 adversarial tests, verify forensic audit | E2E, M1-M5 | DONE |
 
 ## Interface Contracts
 ### Simulator CLI Interface (`scripts/simulate_economics.py`)

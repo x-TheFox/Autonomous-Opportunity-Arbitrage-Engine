@@ -17,16 +17,16 @@ The **Autonomous Opportunity Arbitrage Engine (AOAE)** is an institutional-grade
 Traditional proposals for "AI-powered bug bounty hunting" or "autonomous penetration testing" suffer from a fatal structural flaw: they target **Web2 public bug bounty programs** (HackerOne, Bugcrowd). In Web2 environments, automated scanning is economically insolvent:
 - **Catastrophic Duplicate Rates (85%–90%)**: Competing scanners identify low-hanging vulnerabilities within minutes of program launch.
 - **Subjective Human Triage Friction (75% Rejection)**: Unverified reports are dismissed as "Informative", "Won't Fix", or "Out of Scope".
-- **Severe Negative Expected Value**: With marginal compute costs of $0.50 per target, net Expected Value ($\text{EV}$) is **-$80.55 per evaluated target** ($\text{ROCS} = 0.21\times$ to $0.40\times$), guaranteeing total gambler's ruin ($P_{\text{ruin}} = 100\%$).
+- **Severe Negative Expected Value**: With marginal compute costs of \$0.50 per target, net Expected Value ($\text{EV}$) is **-\$80.55 per evaluated target** ($\text{ROCS} = 0.21\times$ to \$0.40\times$), guaranteeing total gambler's ruin ($P_{\text{ruin}} = 100\%$).
 - **Legal & Statutory Exposure**: Active scanning of third-party Web2 web infrastructure exposes operators to Computer Fraud and Abuse Act (CFAA / 18 U.S.C. § 1030) violations and platform IP ban waves.
 
 ### 1.2 The Winning Machine-Verifiable Paradigm
 The AOAE refactors the entire operational thesis away from subjective human-triaged consulting and concentrates compute capital exclusively on **machine-verifiable standing reward protocols**:
 
-$$\text{ROCS}_{\text{Web3}} = \frac{\text{Settled Revenue}}{\text{Compute \& Token Spend}} = \mathbf{14.30\times} \quad \text{vs} \quad \text{ROCS}_{\text{Web2}} = \mathbf{0.40\times}$$
+$$\text{ROCS}_{\text{Web3}} = \frac{\text{Settled Revenue}}{\text{Compute and Token Spend}} = \mathbf{14.30\times} \quad \text{vs} \quad \text{ROCS}_{\text{Web2}} = \mathbf{0.40\times}$$
 
 1. **Deterministic Verification Theorem**: Smart contract exploits do not depend on human opinion. A valid exploit is proven through a local Foundry Anvil state fork where execution produces a deterministic balance delta ($\Delta \text{Balance} > 0$). When a mathematical state transition is verified locally, it is universally reproducible by judges ($\delta_{\text{local}} \equiv \delta_{\text{mainnet}}$).
-2. **Positive Net Unit Economics**: Web3 smart contract targets generate an Expected Value of **+$398.26 per evaluated target**, driven by high median payouts ($18,500 USDC), high acceptance rates ($90\%+$), and lower duplicate density ($35\%$).
+2. **Positive Net Unit Economics**: Web3 smart contract targets generate an Expected Value of **+\$398.26 per evaluated target**, driven by high median payouts (\$18,500 USDC), high acceptance rates (\$90\%+$), and lower duplicate density (\$35\%$).
 3. **Negative Cash Conversion Cycle ($-19\text{ Days}$)**: Web3 contest bounties settle within 3 to 14 days, whereas cloud compute and LLM API invoices are billed on net-30 terms. The engine receives cash inflows 19 days *before* operational expenses mature, enabling exponential self-funded compounding.
 
 ---
@@ -89,7 +89,7 @@ The engine's financial models and parameter distributions are programmatically c
 
 ### 3.1 Expected Value (EV) Trajectories: Web3 vs Web2
 ![Expected Value Comparison](assets/ev_comparison.svg)
-*Figure 1: Cumulative Net Expected Profit across Evaluated Target Volumes. Web3 generates +$398.26/target (+$398,260 at 1,000 targets), while Web2 bleeds -$80.55/target (-$80,550 at 1,000 targets).*
+*Figure 1: Cumulative Net Expected Profit across Evaluated Target Volumes. Web3 generates +\$398.26/target (+\$398,260 at 1,000 targets), while Web2 bleeds -\$80.55/target (-\$80,550 at 1,000 targets).*
 
 ### 3.2 Fractional Kelly Capital Allocation
 ![Kelly Allocation Schedule](assets/kelly_allocation.svg)
@@ -97,7 +97,7 @@ The engine's financial models and parameter distributions are programmatically c
 
 ### 3.3 365-Day Monte Carlo Cumulative Profit Trajectories
 ![Financial Trajectories](assets/financial_trajectories.svg)
-*Figure 3: 10,000 Stochastic Iterations Across Financial Regimes. Upside Tier achieves +$304,589/year ($\text{ROCS} = 14.30\times$), Base Tier yields +$59,153/year ($\text{ROCS} = 4.50\times$), while Conservative Web2 bleeds -$20,965/year.*
+*Figure 3: 10,000 Stochastic Iterations Across Financial Regimes. Upside Tier achieves +\$304,589/year ($\text{ROCS} = 14.30\times$), Base Tier yields +\$59,153/year ($\text{ROCS} = 4.50\times$), while Conservative Web2 bleeds -\$20,965/year.*
 
 ### 3.4 Parameter Sensitivity Heatmap
 ![Sensitivity Heatmap](assets/sensitivity_heatmap.svg)
@@ -120,7 +120,7 @@ The repository features comprehensive, mathematically rigorous documentation spa
 | **07** | [Autonomous System Architecture](docs/07_autonomous_system_architecture.md) | Complete specifications for all 17 subsystems, Decoupled Brain vs Hands, and 4 high-fidelity Mermaid diagrams. |
 | **08** | [Financial Engineering Model](docs/08_financial_engineering_model.md) | 3-tier schedules (Conservative, Base, Upside), CapEx/OpEx, Cash Conversion Cycles, and Gambler's Ruin immunity. |
 | **09** | [Adversarial Failure Analysis](docs/09_adversarial_failure_analysis.md) | Threat modeling across 5 critical failure vectors, 17 subsystem defenses, and automated circuit breakers. |
-| **10** | [MVP Validation & Decision Gates](docs/10_mvp_validation_and_decision_gates.md) | 30-Day, $250-Budget Minimum Viable Experiment protocol and quantitative Go/No-Go decision gates. |
+| **10** | [MVP Validation & Decision Gates](docs/10_mvp_validation_and_decision_gates.md) | 30-Day, \$250-Budget Minimum Viable Experiment protocol and quantitative Go/No-Go decision gates. |
 
 ---
 
@@ -154,12 +154,12 @@ The table below contrasts authentic 365-day Monte Carlo simulation outputs gener
 
 | Economic Metric | Web3 Smart Contracts (Immunefi/C4) | Web2 Bug Bounties (HackerOne) | Performance Delta |
 |---|---|---|---|
-| **Mean Net Annual Profit** | **+$139,687.12** | **-$2,498.69** | **+$142,185.81 (Profitable)** |
-| **Median Net Annual Profit** | **+$139,027.54** | **-$2,500.00** | **Capital Compounding** |
+| **Mean Net Annual Profit** | **+\$139,687.12** | **-\$2,498.69** | **+\$142,185.81 (Profitable)** |
+| **Median Net Annual Profit** | **+\$139,027.54** | **-\$2,500.00** | **Capital Compounding** |
 | **Return on Compute Spend (ROCS)** | **8.99x** | **0.21x** | **42.8x Capital Efficiency** |
 | **Expected Annual ROI** | **+5,587.48%** | **-99.95%** | **Self-Funding Growth** |
 | **Annualized Sharpe Ratio** | **+2.50** | **-81.82** | **Institutional Quality** |
-| **Probability of Ruin ($P_{\text{ruin}}$)** | **8.70%** (0.2% with $2.5k reserve) | **100.00%** | **Guaranteed Solvency** |
+| **Probability of Ruin ($P_{\text{ruin}}$)** | **8.70%** (0.2% with \$2.5k reserve) | **100.00%** | **Guaranteed Solvency** |
 | **Execution Wall-Clock Time** | **0.57 seconds** | **0.37 seconds** | **Zero External Dependencies** |
 
 ---
@@ -191,7 +191,7 @@ bash tests/run_all_tests.sh --strict
   - *Tier 1*: CLI flags, JSON/SVG exports, seed reproducibility, parametric EV formulas.
   - *Tier 2*: Boundary conditions (0% and 100% duplicate rates, infinite triage latency, negative budgets).
   - *Tier 3*: Risk metric coherence ($\text{CVaR}_{95} \ge \text{VaR}_{95}$), ROCS ratios, Sharpe and Sortino ordering.
-  - *Tier 4*: Real-world stress scenarios (30-day $250 MVE simulation, bear market 50% bounty shock, 90% duplicate storm).
+  - *Tier 4*: Real-world stress scenarios (30-day \$250 MVE simulation, bear market 50% bounty shock, 90% duplicate storm).
 
 ---
 

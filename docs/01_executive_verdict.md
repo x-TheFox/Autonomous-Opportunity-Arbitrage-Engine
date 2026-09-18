@@ -68,10 +68,10 @@ The failure of naive Web2 automated bug hunting is not a function of inadequate 
 In Web2 security, vulnerability evaluation is fundamentally socio-technical and political, not mathematical. Platforms such as HackerOne and Bugcrowd position human triagers between the researcher and the program sponsor. These triagers operate under strict behavioral incentives to minimize noise for corporate customers. Consequently, corporate security teams treat bug bounty budgets as risk-mitigation cost centers rather than programmatic accounts payable. 
 
 Triagers and program managers exercise unilateral authority to classify submissions as:
-- **"Informative" ($0)**: Acknowledging the issue exists but claiming it carries no demonstrable business risk.
-- **"Duplicate of Internal Issue" ($0)**: Asserting that internal engineering teams had already logged the flaw on an internal Jira ticket prior to submission, requiring zero public auditability or proof.
-- **"Won't Fix / Accepted Risk" ($0)**: Declaring that the identified behavior is an intentional design trade-off.
-- **"Out of Scope" ($0)**: Restricting bounty payouts based on hyper-granular scope exclusions buried in program policy updates.
+- **"Informative" (\$0)**: Acknowledging the issue exists but claiming it carries no demonstrable business risk.
+- **"Duplicate of Internal Issue" (\$0)**: Asserting that internal engineering teams had already logged the flaw on an internal Jira ticket prior to submission, requiring zero public auditability or proof.
+- **"Won't Fix / Accepted Risk" (\$0)**: Declaring that the identified behavior is an intentional design trade-off.
+- **"Out of Scope" (\$0)**: Restricting bounty payouts based on hyper-granular scope exclusions buried in program policy updates.
 
 Because an LLM-driven autonomous agent lacks contextual human negotiation capabilities and legal standing to contest triage decisions, automated submissions suffer an acceptance rate of less than 25% even when a syntactic flaw is present.
 
@@ -198,7 +198,7 @@ flowchart TD
     subgraph Web2_Broken ["BROKEN WEB2 PARADIGM (STRUCTURAL COLLAPSE)"]
         W1[Target Ingestion: Ad-Spend Signal] -->|Ad spend != Security Budget| W2[Network Probing: Uncoordinated Scanning]
         W2 -->|CFAA 18 U.S.C. 1030 / UK CMA Violation| W3{WAF / Bot Defense}
-        W3 -->|IP Blocked / Rate-Limited| W4[Cost Spikes: $8/GB Residential Proxies]
+        W3 -->|IP Blocked / Rate-Limited| W4[Cost Spikes: USD 8/GB Residential Proxies]
         W3 -->|Passed Probe| W5[Vulnerability Candidate Detected]
         W5 -->|Public Scanner Frontrunning| W6{Duplicate Check}
         W6 -->|85% Duplicate Rate| W7[Zero Payout / Wasted Compute]
@@ -207,7 +207,7 @@ flowchart TD
         W9 -->|75% Classified Informative / Won't Fix| W10[Reputation Deduction: Signal Drops]
         W10 -->|Signal < 1.0| W11[Account Ban & KYC Forfeiture]
         W9 -->|Accepted Finding| W12[14 to 60+ Days Payout Latency]
-        W12 -->|Fiat KYC / W-8BEN Barrier| W13[Realized Payout: $300 Net EV: -$0.28/target]
+        W12 -->|Fiat KYC / W-8BEN Barrier| W13[Realized Payout: USD 300 Net EV: -USD 0.28/target]
     end
 
     subgraph Web3_Winning ["WINNING AOAE PARADIGM (MACHINE-VERIFIABLE ARBITRAGE)"]
@@ -215,7 +215,7 @@ flowchart TD
         M2 -->|Zero Network Packets / Zero CFAA Risk| M3[LLM Reasoning Brain: Invariant Hypothesis Generator]
         M3 --> M4[Deterministic Hands: Foundry Fuzzing Engine]
         M4 -->|State Invariant Violated?| M5{Invariant Check}
-        M5 -->|No Violation| M6[Discard Hypothesis: Cost < $0.005]
+        M5 -->|No Violation| M6[Discard Hypothesis: Cost < USD 0.005]
         M5 -->|Violation Detected| M7[Dual-Agent Adversarial Validator]
         M7 -->|Adversarial Skeptic Agent: Replay Test| M8{Deterministic Verification}
         M8 -->|Failed Replay| M6
@@ -223,7 +223,7 @@ flowchart TD
         M9 --> M10[Submit to Immunefi Programmatic Clearinghouse]
         M10 -->|Foundry forge test Confirms Bug| M11[Objective Severity Matrix Score]
         M11 --> M12[Programmatic On-Chain Multi-Sig / Smart Escrow]
-        M12 -->|USDC / ETH Wallet Transfer| M13[Realized Payout: $7,131 Net EV: +$398.26/target]
+        M12 -->|USDC / ETH Wallet Transfer| M13[Realized Payout: USD 7,131 Net EV: +USD 398.26/target]
     end
 
     style Web2_Broken fill:#ffebee,stroke:#c62828,stroke-width:2px;

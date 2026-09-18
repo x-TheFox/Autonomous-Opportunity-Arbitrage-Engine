@@ -38,7 +38,7 @@ On public bug bounty programs, uncoordinated automated scanners experience a cat
 #### 4. Triage Acceptance Probability: $P(\text{accepted}_i \mid \text{unique}_i)$
 The conditional probability that a unique submission survives human triage and corporate risk assessment without being closed under non-monetary classifications:
 
-$$P(\text{accepted}_i) = 1 - \left[ P(\text{informative}) + P(\text{not\_applicable}) + P(\text{wont\_fix}) + P(\text{out\_of\_scope}) + P(\text{spam}) \right]$$
+$$P(\text{accepted}_i) = 1 - \left[ P(\text{informative}) + P(\text{not-applicable}) + P(\text{wont-fix}) + P(\text{out-of-scope}) + P(\text{spam}) \right]$$
 
 Across major crowdsourced platforms, **60% to 80%** of all incoming reports are classified as invalid, noise, or non-actionable, leaving $P(\text{accepted}) \in [0.20, 0.35]$.
 
@@ -48,15 +48,15 @@ The expected cash disbursement conditional on acceptance. While platform marketi
 #### 6. Comprehensive Granular Cost Function: $\sum \text{Costs}_i$
 The total capital consumed to discover, verify, document, and submit an opportunity:
 
-$$\sum \text{Costs}_i = C_{\text{compute}} + C_{\text{proxy}} + C_{\text{llm}} + C_{\text{labor}} + C_{\text{capital\_discount}} + C_{\text{account\_depreciation}}$$
+$$\sum \text{Costs}_i = C_{\text{compute}} + C_{\text{proxy}} + C_{\text{llm}} + C_{\text{labor}} + C_{\text{capital-discount}} + C_{\text{account-depreciation}}$$
 
 Where:
 - $C_{\text{compute}}$: Cloud container orchestration, virtual machines, network I/O.
 - $C_{\text{proxy}}$: Residential proxy bandwidth required to evade WAF/TLS fingerprinting.
 - $C_{\text{llm}}$: Token ingestion and generation costs for AST reasoning, PoC drafting, and report packaging.
 - $C_{\text{labor}}$: Human intervention required to review reports, resolve triage disputes, and manage payout inquiries.
-- $C_{\text{capital\_discount}}$: Opportunity cost of capital locked up during multi-week triage latency.
-- $C_{\text{account\_depreciation}}$: Amortized cost of reputation erosion, KYC legal entity maintenance, and VPN infrastructure.
+- $C_{\text{capital-discount}}$: Opportunity cost of capital locked up during multi-week triage latency.
+- $C_{\text{account-depreciation}}$: Amortized cost of reputation erosion, KYC legal entity maintenance, and VPN infrastructure.
 
 ---
 
@@ -102,11 +102,11 @@ The following table establishes empirical parameter distributions across three p
 
 | Parameter | Mathematical Meaning | Public VDP (Unpaid) [95% CI] | Public Bounty (BDP) [95% CI] | Private Bounty (Invite) [95% CI] | Calibration Source / Evidence |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **$P(\text{eligible})$** | Target in-scope, active, and paid | $0.85 \pm 0.05$ | $0.65 \pm 0.05$ | $0.90 \pm 0.03$ | Disclose.io index; H1 program scope audits |
-| **$P(\text{finding})$** | Automated tool detects candidate flaw | $0.04 \pm 0.01$ | $0.03 \pm 0.01$ | $0.02 \pm 0.005$ | Commercial scanner benchmarks (Nuclei/httpx) |
-| **$P(\text{unique})$** | Finding is not an existing duplicate | $0.20 \pm 0.05$ | $0.15 \pm 0.03$ | $0.45 \pm 0.08$ | HackerOne 9th Ed.; Bugcrowd Duplicate Ratio |
-| **$P(\text{accepted})$** | Report validated; awarded bounty | $0.40 \pm 0.08$ | $0.25 \pm 0.05$ | $0.55 \pm 0.06$ | Platform noise statistics (60%–80% invalid) |
-| **$P(\text{bounty})$** | Unconditional probability of payout | $0.00272 \pm 0.0008$ | $0.00073 \pm 0.0002$ | $0.00445 \pm 0.0009$ | Joint probability multiplication |
+| **$P(\text{eligible})$** | Target in-scope, active, and paid | \$0.85 \pm 0.05$ | \$0.65 \pm 0.05$ | \$0.90 \pm 0.03$ | Disclose.io index; H1 program scope audits |
+| **$P(\text{finding})$** | Automated tool detects candidate flaw | \$0.04 \pm 0.01$ | \$0.03 \pm 0.01$ | \$0.02 \pm 0.005$ | Commercial scanner benchmarks (Nuclei/httpx) |
+| **$P(\text{unique})$** | Finding is not an existing duplicate | \$0.20 \pm 0.05$ | \$0.15 \pm 0.03$ | \$0.45 \pm 0.08$ | HackerOne 9th Ed.; Bugcrowd Duplicate Ratio |
+| **$P(\text{accepted})$** | Report validated; awarded bounty | \$0.40 \pm 0.08$ | \$0.25 \pm 0.05$ | \$0.55 \pm 0.06$ | Platform noise statistics (60%–80% invalid) |
+| **$P(\text{bounty})$** | Unconditional probability of payout | \$0.00272 \pm 0.0008$ | \$0.00073 \pm 0.0002$ | \$0.00445 \pm 0.0009$ | Joint probability multiplication |
 | **$\text{Payout}$** | Realized reward per paid finding | **\$0.00** | **\$300.00** [CI: \$150–\$500] | **\$1,250.00** [CI: \$800–\$2,500]| Disclosed median public vs private bounties |
 | **$C_{\text{compute}}$** | Cloud runner / VM cost per target | \$0.050 | \$0.050 | \$0.050 | AWS ECS/Fargate container instance pricing |
 | **$C_{\text{proxy}}$** | Residential proxy bandwidth / target | \$0.200 | \$0.200 | \$0.200 | Bright Data / Oxylabs @ \$8.00/GB (150MB/scan) |

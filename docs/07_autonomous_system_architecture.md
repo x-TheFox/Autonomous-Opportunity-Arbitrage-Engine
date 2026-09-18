@@ -4,7 +4,7 @@
 
 ### 1.1 The Closed-Loop Opportunity Arbitrage Paradigm
 The Autonomous Opportunity Arbitrage Engine (AOAE) is an institutional-grade, fully automated software system engineered to execute the programmatic standing-reward lifecycle:
-$$\text{DISCOVER TARGET} \longrightarrow \text{TRIAGE & ALLOCATE} \longrightarrow \text{PLAN & PROVE} \longrightarrow \text{ADVERSARIAL VERIFY} \longrightarrow \text{PACKAGE & SETTLE} \longrightarrow \text{LEARN}$$
+$$\text{DISCOVER TARGET} \longrightarrow \text{TRIAGE and ALLOCATE} \longrightarrow \text{PLAN and PROVE} \longrightarrow \text{ADVERSARIAL VERIFY} \longrightarrow \text{PACKAGE and SETTLE} \longrightarrow \text{LEARN}$$
 
 Unlike conventional workflow automation or open-loop vulnerability scanners, the AOAE operates under strict closed-loop constraints:
 1. **Zero Human Sales & Outreach**: Opportunities are ingested exclusively from public, standing reward contracts, programmatic bug bounty protocols, and deterministic smart contract systems.
@@ -27,7 +27,7 @@ $$\delta_{\text{local}}(s_t, T^*) \equiv \delta_{\text{mainnet}}(s_t, T^*) \impl
 An exploit hypothesis is recognized as valid if and only if:
 1. It is synthesized by the **Hypothesis Prover** (Subsystem 10).
 2. It withstands adversarial cross-examination by the **Adversarial Skeptic** (Subsystem 11), which attempts to falsify the claim against program scope, out-of-scope conditions, and known bug databases.
-3. It achieves three consecutive successful passes ($3\times$) in the **Deterministic Replay Sandbox** (Subsystem 12) inside a freshly minted, hermetic environment.
+3. It achieves three consecutive successful passes (\$3\times$) in the **Deterministic Replay Sandbox** (Subsystem 12) inside a freshly minted, hermetic environment.
 
 ### 1.4 The Six Operational Tiers Overview
 The system's 17 subsystems are structured across six distinct operational tiers, each executing an isolated phase of the economic pipeline:
@@ -417,7 +417,7 @@ The Normalization Engine implements deterministic adapters that map idiosyncrati
     where:
     - $P_{\text{elig}} = 1.0$ (guaranteed by Subsystem 03).
     - $P_{\text{find}}$ is drawn from a Beta distribution $\text{Beta}(\alpha_{\text{find}}, \beta_{\text{find}})$ conditioned on codebase complexity.
-    - $P_{\text{dup}} = \text{frontrunning\_risk}$ from Subsystem 04.
+    - $P_{\text{dup}} = \text{frontrunning-risk}$ from Subsystem 04.
     - $P_{\text{acc}}$ is drawn from platform-specific acceptance models $\text{Beta}(\alpha_{\text{acc}}, \beta_{\text{acc}})$.
     - $\mathbb{E}[\text{Cost}] = \text{Tokens}_{\text{est}} \times C_{\text{token}} + \text{ComputeSeconds}_{\text{est}} \times C_{\text{compute}}$.
   - Marginal Productivity Index (MPI):
@@ -440,7 +440,7 @@ The Normalization Engine implements deterministic adapters that map idiosyncrati
     }
     ```
 - **Failure Modes & Mitigations**:
-  - *Severe Underestimation of Execution Costs*: Highly convoluted codebases triggering runaway LLM calls. *Mitigation*: Hard bounding of maximum token expenditure ($15.00 limit) passed to the WorkOrder.
+  - *Severe Underestimation of Execution Costs*: Highly convoluted codebases triggering runaway LLM calls. *Mitigation*: Hard bounding of maximum token expenditure (\$15.00 limit) passed to the WorkOrder.
 - **Data Stored**:
   - Table: `ev_assessments`
     - `id`: BIGSERIAL PRIMARY KEY
@@ -460,7 +460,7 @@ The Normalization Engine implements deterministic adapters that map idiosyncrati
   - Real-time system state: Available bankroll ($B_{\text{liquid}}$), active sandbox container slots ($K_{\text{active}} / K_{\text{max}}$), API rate limits.
 - **Core Process & Algorithms**:
   - Multi-Asset Fractional Kelly Criterion:
-    To prevent capital depletion under high-variance payoff distributions, the fraction of liquid capital $f^*$ allocated to opportunity $i$ is sized via the generalized Kelly formula scaled by a conservative $0.25$ safety haircut:
+    To prevent capital depletion under high-variance payoff distributions, the fraction of liquid capital $f^*$ allocated to opportunity $i$ is sized via the generalized Kelly formula scaled by a conservative \$0.25 safety haircut:
     $$f_i^* = 0.25 \times \left( \frac{b_i p_i - q_i}{b_i} \right)$$
     where $b_i = \frac{\text{Payout}_i}{\text{Cost}_i}$, $p_i = P_{\text{find}} \times P_{\text{uniq}} \times P_{\text{acc}}$, and $q_i = 1 - p_i$.
   - Portfolio Constraints:
@@ -483,7 +483,7 @@ The Normalization Engine implements deterministic adapters that map idiosyncrati
     }
     ```
 - **Failure Modes & Mitigations**:
-  - *Capital Starvation / Over-Commitment*: Rapid succession of high-EV targets exhausts liquid cash. *Mitigation*: Strict dynamic reserve floor ($100 liquid reserve) halts new dispatches when available capital dips below safety limits.
+  - *Capital Starvation / Over-Commitment*: Rapid succession of high-EV targets exhausts liquid cash. *Mitigation*: Strict dynamic reserve floor (\$100 liquid reserve) halts new dispatches when available capital dips below safety limits.
 - **Data Stored**:
   - Table: `portfolio_allocations`
     - `work_order_id`: VARCHAR(64) PRIMARY KEY
@@ -711,7 +711,7 @@ The Normalization Engine implements deterministic adapters that map idiosyncrati
     ```bash
     anvil --fork-url $ARCHIVE_RPC --fork-block-number $PINNED_BLOCK --silent
     ```
-  - Triple Replay Protocol ($3\times$):
+  - Triple Replay Protocol (\$3\times$):
     - Runs the exact reproduction command three consecutive times in separate isolated instances:
       $$\text{ReplayVerification} = \prod_{i=1}^{3} \mathbb{I}(\text{ExitCode}_i = 0 \land \Delta \text{Balance}_i > 0)$$
     - If any single run fails, flakes, reverts, or times out, the PoC is declared non-deterministic and rejected.
@@ -939,10 +939,10 @@ Let the payoff matrix be defined as:
 
 | Outcome | Prover Payoff ($U_P$) | Skeptic Payoff ($U_S$) | Real-World System Consequence |
 |---|---|---|---|
-| **True Bug Validated (Reproducible & Unique)** | $+10$ | $-5$ | Proceeds to Subsystem 12 Replay Sandbox and Submission |
-| **False Positive Falsified by Skeptic** | $-10$ | $+15$ | Dropped internally; operator reputation protected; zero token waste |
-| **False Positive Missed by Skeptic (Escapes)** | $-20$ | $-20$ | Caught by Replay Sandbox; both agents penalized; prompts tuned |
-| **Invalid Falsification (Skeptic Kills True Bug)** | $-5$ | $-10$ | Re-examined if Prover provides direct execution counter-evidence |
+| **True Bug Validated (Reproducible & Unique)** | \$+10 | \$-5 | Proceeds to Subsystem 12 Replay Sandbox and Submission |
+| **False Positive Falsified by Skeptic** | \$-10 | \$+15 | Dropped internally; operator reputation protected; zero token waste |
+| **False Positive Missed by Skeptic (Escapes)** | \$-20 | \$-20 | Caught by Replay Sandbox; both agents penalized; prompts tuned |
+| **Invalid Falsification (Skeptic Kills True Bug)** | \$-5 | \$-10 | Re-examined if Prover provides direct execution counter-evidence |
 
 ### 5.2 Multi-Turn Cross-Examination Dialogue State Machine
 The debate proceeds through a strictly bound multi-turn dialectic protocol (maximum 3 rounds):
@@ -953,11 +953,11 @@ The debate proceeds through a strictly bound multi-turn dialectic protocol (maxi
    - Concede the invalidity of the hypothesis.
 4. **Adjudication Gate**: If no consensus is reached after Round 3, the Skeptic holds an absolute veto: any unrefuted objection results in automatic hypothesis termination.
 
-### 5.3 Deterministic Replay Verification Gate ($3\times$ Zero-Flake Execution)
+### 5.3 Deterministic Replay Verification Gate (\$3\times$ Zero-Flake Execution)
 Even if a hypothesis survives the Skeptic review, it must face the final arbiter: Subsystem 12's Deterministic Replay Sandbox.
 - The PoC must execute across three independent, freshly initialized environments with frozen block states and timestamps.
-- Zero reliance on probabilistic LLM output: binary exit code verification ($0 = \text{PASS}, \ne 0 = \text{FAIL}$).
-- Flaky tests (e.g., passing $2/3$ runs due to network jitter or race conditions) are unconditionally discarded.
+- Zero reliance on probabilistic LLM output: binary exit code verification (\$0 = \text{PASS}, \ne 0 = \text{FAIL}$).
+- Flaky tests (e.g., passing \$2/3$ runs due to network jitter or race conditions) are unconditionally discarded.
 
 ---
 
@@ -993,7 +993,7 @@ sequenceDiagram
         GATE->>TRI: Transmit Legally Approved Target
         TRI->>TRI: Compute Competition Saturation & Parametric EV
         TRI->>TRI: Squeeze via Fractional Kelly Sizing ($f^* \times 0.25$)
-        TRI->>BRAIN: Dispatch WorkOrder (Token Cap: $15, Timeout: 600s)
+        TRI->>BRAIN: Dispatch WorkOrder (Token Cap: USD 15, Timeout: 600s)
         
         loop Tool Execution Iterations (Max 6 Steps)
             BRAIN->>HANDS: Emit Strict JSON Tool Step
@@ -1018,7 +1018,7 @@ sequenceDiagram
                 SUB->>EXT: Transmit PGP-Encrypted Payload / PR Submission
                 EXT-->>SUB: Return Platform Submission Ticket ID
                 SUB->>DISP: Initialize Triage Lifecycle Tracking
-                DISP->>LEDG: Open Accounts Receivable ($0 Initial Cashflow)
+                DISP->>LEDG: Open Accounts Receivable (USD 0 Initial Cashflow)
                 
                 Note over EXT,DISP: Triage & Validation Window (3 to 21 Days)
                 EXT->>DISP: Confirm Bounty Settlement Notice
@@ -1047,7 +1047,7 @@ stateDiagram-v2
     NORMALIZED --> ELIGIBLE_QUEUED: Safe-Harbor Gate Approved
     ELIGIBLE_QUEUED --> EVALUATING_EV: Queue Dispatch for Triage
     
-    EVALUATING_EV --> DISCARDED_NEGATIVE_EV: Net EV <= $2.00 or EV/Cost <= 2.0x
+    EVALUATING_EV --> DISCARDED_NEGATIVE_EV: Net EV <= USD 2.00 or EV/Cost <= 2.0x
     DISCARDED_NEGATIVE_EV --> [*]: Metric Recorded to Cold Storage
 
     EVALUATING_EV --> BUDGET_ALLOCATED: EV Positive & Kelly Sized
@@ -1119,17 +1119,17 @@ The allocator enforces three strict operational constraints:
 graph TD
     A["Incoming Queue of Legally Approved Opportunities"] --> B["Compute Feature Vectors: Age, Complexity, Reward Scale"]
     B --> C["Calculate Net EV: EV_i = P_elig * P_find * P_uniq * P_acc * Payout_i - Cost_est"]
-    C --> D{"Is EV_i > $2.00 AND EV/Cost > 2.0x?"}
+    C --> D{"Is EV_i > USD 2.00 AND EV/Cost > 2.0x?"}
     D -- No --> E["Discard to Low-Priority Cold Archive"]
     D -- Yes --> F["Compute Fractional Kelly Allocation: f*_i = 0.25 * (b*p - q) / b"]
     
     F --> G["Rank Targets by Marginal Productivity Index: MPI_i = EV_i / Compute_Hours"]
-    G --> H["Apply System Constraints: Max $50/target, Min $100 liquid floor, Max 8 workers"]
+    G --> H["Apply System Constraints: Max USD 50/target, Min USD 100 liquid floor, Max 8 workers"]
 
     H --> I{"Target Asset Archetype"}
     I -- "Machine-Verifiable Smart Contract (Web3)" --> J["Priority Tier ALPHA: 70% Active Compute Allocation, Full Tooling Suite"]
     I -- "Open-Source Repository Bounty (OSS)" --> K["Priority Tier BETA: 20% Active Compute Allocation, Focused Fuzzing Suite"]
-    I -- "Subjective Web2 VDP / Discovery" --> L["Priority Tier GAMMA: 10% Exploratory Budget, Strict $5.00 Hard Cap"]
+    I -- "Subjective Web2 VDP / Discovery" --> L["Priority Tier GAMMA: 10% Exploratory Budget, Strict USD 5.00 Hard Cap"]
 
     J --> M["Dispatch WorkOrder to Execution Pool"]
     K --> M
@@ -1354,7 +1354,7 @@ CREATE INDEX idx_vector_cosine ON heuristic_memory_embeddings USING ivfflat (emb
 ### 10.2 Time-Series Metrics & Telemetry Integration (TimescaleDB)
 High-frequency telemetry (token count deltas, container CPU loads, network I/O, and API latency) is streamed to hypertable instances managed via TimescaleDB:
 - Continuous rollups aggregate average token cost per step across rolling 1-hour and 24-hour windows.
-- Real-time alerting monitors anomalies (e.g., token consumption spiking above $3.00/min on a single target), automatically triggering execution plan circuit breakers.
+- Real-time alerting monitors anomalies (e.g., token consumption spiking above \$3.00/min on a single target), automatically triggering execution plan circuit breakers.
 
 ### 10.3 Vector Heuristic Memory & Experience Retrieval (pgvector)
 The Learning Store (Subsystem 17) uses `pgvector` to store 1536-dimensional embeddings (generated via OpenAI `text-embedding-3-small` or local embedding models) of all historically failed and falsified candidate hypotheses:

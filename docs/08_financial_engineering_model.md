@@ -54,11 +54,11 @@ CapEx represents upfront asset investments amortized over a 36-month asset lifes
 
 | Category | Infrastructure Line Item | Technical Specification | Initial Cost (USD) | Amortized (Monthly) |
 |---|---|---|---|---|
-| Hardware | Dedicated Research Workstation | AMD Threadripper 7960X (24C/48T), 128GB DDR5 ECC RAM, Dual 2TB Samsung 990 Pro NVMe, RTX 4090 24GB | $6,200.00 | $172.22 |
-| Security | Hardware Security Enclaves (HSM) | Dual YubiKey 5 FIPS + Ledger Enterprise HSM for deterministic submission and payout signing | $1,250.00 | $34.72 |
-| Infrastructure | Local High-Speed Networking & UPS | 10GbE SFP+ switch, APC Smart-UPS 1500VA battery backup, dedicated gigabit fiber drop | $1,550.00 | $43.06 |
-| Deposits | Platform Compliance Escrow Deposits | Upfront KYC verification and security bond reserves across automated disclosure platforms | $2,000.00 | $55.56 |
-| Total CapEx | Initial Institutional Capitalization | Enterprise Research Grade Setup | $11,000.00 | $305.56 |
+| Hardware | Dedicated Research Workstation | AMD Threadripper 7960X (24C/48T), 128GB DDR5 ECC RAM, Dual 2TB Samsung 990 Pro NVMe, RTX 4090 24GB | \$6,200.00 | \$172.22 |
+| Security | Hardware Security Enclaves (HSM) | Dual YubiKey 5 FIPS + Ledger Enterprise HSM for deterministic submission and payout signing | \$1,250.00 | \$34.72 |
+| Infrastructure | Local High-Speed Networking & UPS | 10GbE SFP+ switch, APC Smart-UPS 1500VA battery backup, dedicated gigabit fiber drop | \$1,550.00 | \$43.06 |
+| Deposits | Platform Compliance Escrow Deposits | Upfront KYC verification and security bond reserves across automated disclosure platforms | \$2,000.00 | \$55.56 |
+| Total CapEx | Initial Institutional Capitalization | Enterprise Research Grade Setup | \$11,000.00 | \$305.56 |
 
 ### 2.2 Operating Expenditure (OpEx) Schedule
 
@@ -66,13 +66,13 @@ OpEx reflects recurring monthly cash burns required to discover, fuzz, prove, an
 
 | Expense Category | Service Provider / Architecture | Pricing Basis & Usage Metrics | Monthly Budget (USD) |
 |---|---|---|---|
-| Cloud Compute & Sandboxes | Hetzner Dedicated Server (AX102) | AMD Ryzen 9 7950X3D, 128GB DDR5, 2x 1.92TB NVMe; hosts ephemeral Docker/Anvil sandboxes | $280.00 |
-| LLM Inference: Frontier Models | Anthropic (Claude 3.5 Sonnet) / OpenAI (GPT-4o) | High-reasoning exploit synthesis: ~$3.00/MTok prompt, ~$15.00/MTok completion (~80M tokens/mo) | $1,200.00 |
-| LLM Inference: Local SLMs | Self-hosted Qwen 2.5 Coder 32B / Llama 3.3 70B | Fast AST summarization and decompilation on local RTX 4090 (marginal electricity only) | $45.00 |
-| Blockchain Node RPCs | Alchemy / QuickNode / Dedicated Reth | Full EVM archive nodes, historical state lookups, trace API calls across Ethereum, Arbitrum, Base | $350.00 |
-| Residential Proxy Pools | Bright Data / Oxylabs Rotating IPs | Anti-fingerprinting proxy egress for public repository indexing and target ingestion | $175.00 |
-| Domain & Identity Maintenance | Cloudflare Zero Trust, Pro DNS, PGP | Encrypted communications, automated email relay infrastructure, and secure webhook tunnels | $50.00 |
-| Total Base OpEx | Monthly Operational Cash Outflow | Fixed & Variable Monthly Running Costs | $2,100.00 |
+| Cloud Compute & Sandboxes | Hetzner Dedicated Server (AX102) | AMD Ryzen 9 7950X3D, 128GB DDR5, 2x 1.92TB NVMe; hosts ephemeral Docker/Anvil sandboxes | \$280.00 |
+| LLM Inference: Frontier Models | Anthropic (Claude 3.5 Sonnet) / OpenAI (GPT-4o) | High-reasoning exploit synthesis: ~\$3.00/MTok prompt, ~\$15.00/MTok completion (~80M tokens/mo) | \$1,200.00 |
+| LLM Inference: Local SLMs | Self-hosted Qwen 2.5 Coder 32B / Llama 3.3 70B | Fast AST summarization and decompilation on local RTX 4090 (marginal electricity only) | \$45.00 |
+| Blockchain Node RPCs | Alchemy / QuickNode / Dedicated Reth | Full EVM archive nodes, historical state lookups, trace API calls across Ethereum, Arbitrum, Base | \$350.00 |
+| Residential Proxy Pools | Bright Data / Oxylabs Rotating IPs | Anti-fingerprinting proxy egress for public repository indexing and target ingestion | \$175.00 |
+| Domain & Identity Maintenance | Cloudflare Zero Trust, Pro DNS, PGP | Encrypted communications, automated email relay infrastructure, and secure webhook tunnels | \$50.00 |
+| Total Base OpEx | Monthly Operational Cash Outflow | Fixed & Variable Monthly Running Costs | \$2,100.00 |
 
 ---
 
@@ -83,7 +83,7 @@ The financial engine executes zero transactions without a positive mathematical 
 $$EV = P(\text{eligible}) \times P(\text{finding}) \times P(\text{unique}) \times P(\text{accepted}) \times \text{Payout} - \text{Cost}_{\text{marginal}}$$
 
 Where:
-- $P(\text{eligible})$: The deterministic safe-harbor gate verification probability ($1.0$ post-filtering; $0.0$ if out of scope).
+- $P(\text{eligible})$: The deterministic safe-harbor gate verification probability (\$1.0 post-filtering; \$0.0 if out of scope).
 - $P(\text{finding})$: The empirical probability that target fuzzing and semantic invariant analysis uncovers an exploitable state transition.
 - $P(\text{unique}) = 1 - \text{DuplicateRate}$: The probability that no concurrent human hunter or competing bot has submitted the finding.
 - $P(\text{accepted})$: The probability that the triage team or automated verification contract validates and accepts the vulnerability report.
@@ -127,17 +127,17 @@ The table below provides an exhaustive comparative view of resource consumption,
 | Uniqueness Probability $P(\text{unique})$ | 12.0% (2.88 unique) | 55.0% (7.92 unique) | 82.0% (7.38 unique) |
 | Triage Acceptance Rate $P(\text{accepted})$ | 35.0% (heavy human rejection) | 70.0% (adversarially pre-vetted) | 90.0% (deterministic replay verified) |
 | Realized Valid Submissions | **1.01 payouts / month** | **5.54 payouts / month** | **6.64 payouts / month** |
-| Median Realized Payout | $850.00 | $1,250.00 | $4,200.00 |
-| Gross Monthly Revenue | **$858.50** | **$6,925.00** | **$27,888.00** |
-| LLM Token OpEx | $1,800.00 ($3.00/target) | $1,260.00 ($7.00/target) | $1,500.00 ($25.00/target) |
-| Sandbox & Cloud Compute OpEx | $350.00 | $280.00 | $450.00 |
-| Fixed Infra, RPCs & Proxies | $150.00 | $150.00 | $250.00 |
-| Total Monthly OpEx | **$2,300.00** | **$1,690.00** | **$2,200.00** |
-| Net Monthly Margin (USD) | **-$1,441.50 (NET LOSS)** | **+$5,235.00 (NET PROFIT)** | **+$25,688.00 (SUPERPROFIT)** |
+| Median Realized Payout | \$850.00 | \$1,250.00 | \$4,200.00 |
+| Gross Monthly Revenue | **\$858.50** | **\$6,925.00** | **\$27,888.00** |
+| LLM Token OpEx | \$1,800.00 (\$3.00/target) | \$1,260.00 (\$7.00/target) | \$1,500.00 (\$25.00/target) |
+| Sandbox & Cloud Compute OpEx | \$350.00 | \$280.00 | \$450.00 |
+| Fixed Infra, RPCs & Proxies | \$150.00 | \$150.00 | \$250.00 |
+| Total Monthly OpEx | **\$2,300.00** | **\$1,690.00** | **\$2,200.00** |
+| Net Monthly Margin (USD) | **-\$1,441.50 (NET LOSS)** | **+\$5,235.00 (NET PROFIT)** | **+\$25,688.00 (SUPERPROFIT)** |
 | Net Monthly Margin (%) | **-167.9%** | **+75.6%** | **+92.1%** |
 | Return on Compute Spend (ROCS) | **0.40x (Capital Destructive)** | **4.50x (Highly Productive)** | **14.30x (Exponential Growth)** |
 | Mean Triage Payout Latency | 45–60 days | 14–21 days | 3–14 days |
-| Required Working Capital Float | $5,000.00 (90-day cash buffer) | $2,500.00 (45-day cash buffer) | $1,500.00 (20-day cash buffer) |
+| Required Working Capital Float | \$5,000.00 (90-day cash buffer) | \$2,500.00 (45-day cash buffer) | \$1,500.00 (20-day cash buffer) |
 
 ### 4.2 Multi-Horizon PnL Projections (Daily, Monthly, Annual)
 
@@ -145,16 +145,16 @@ Translating unit economics into temporal financial statements reveals the compou
 
 | Financial Horizon | Metric | Conservative Tier | Base Tier | Upside Tier |
 |---|---|---|---|---|
-| Daily Trajectory | Gross Revenue | $28.62 / day | $230.83 / day | $929.60 / day |
-| Daily Trajectory | Operating Expense | $76.67 / day | $56.33 / day | $73.33 / day |
-| Daily Trajectory | Net Daily Margin | -$48.05 / day | +$174.50 / day | +$856.27 / day |
-| Monthly Statement | Gross Revenue | $858.50 / month | $6,925.00 / month | $27,888.00 / month |
-| Monthly Statement | Operating Expense | $2,300.00 / month | $1,690.00 / month | $2,200.00 / month |
-| Monthly Statement | Net Monthly PnL | -$1,441.50 / month | +$5,235.00 / month | +$25,688.00 / month |
-| Annual Statement | Gross Revenue | $10,302.00 / year | $83,100.00 / year | $334,656.00 / year |
-| Annual Statement | Operating Expense | $27,600.00 / year | $20,280.00 / year | $26,400.00 / year |
-| Annual Statement | CapEx Amortization | $3,666.72 / year | $3,666.72 / year | $3,666.72 / year |
-| Annual Statement | **Net Operating Profit** | **-$20,964.72 / year** | **+$59,153.28 / year** | **+$304,589.28 / year** |
+| Daily Trajectory | Gross Revenue | \$28.62 / day | \$230.83 / day | \$929.60 / day |
+| Daily Trajectory | Operating Expense | \$76.67 / day | \$56.33 / day | \$73.33 / day |
+| Daily Trajectory | Net Daily Margin | -\$48.05 / day | +\$174.50 / day | +\$856.27 / day |
+| Monthly Statement | Gross Revenue | \$858.50 / month | \$6,925.00 / month | \$27,888.00 / month |
+| Monthly Statement | Operating Expense | \$2,300.00 / month | \$1,690.00 / month | \$2,200.00 / month |
+| Monthly Statement | Net Monthly PnL | -\$1,441.50 / month | +\$5,235.00 / month | +\$25,688.00 / month |
+| Annual Statement | Gross Revenue | \$10,302.00 / year | \$83,100.00 / year | \$334,656.00 / year |
+| Annual Statement | Operating Expense | \$27,600.00 / year | \$20,280.00 / year | \$26,400.00 / year |
+| Annual Statement | CapEx Amortization | \$3,666.72 / year | \$3,666.72 / year | \$3,666.72 / year |
+| Annual Statement | **Net Operating Profit** | **-\$20,964.72 / year** | **+\$59,153.28 / year** | **+\$304,589.28 / year** |
 | Annual Statement | Annualized ROI (%) | **-190.6%** | **+537.8%** | **+2,768.9%** |
 
 ---
@@ -166,15 +166,15 @@ The core economic insight uncovered by the engine's quantitative model is the st
 ```mermaid
 flowchart LR
     subgraph Web2_Economics["Web2 Bug Bounty Model"]
-        W2_C[Compute Cost: $0.504] --> W2_P[Expected Payout: $300]
+        W2_C[Compute Cost: USD 0.504] --> W2_P[Expected Payout: USD 300]
         W2_P --> W2_F[Hit Rate: 0.073%]
-        W2_F --> W2_R["Net EV: -$0.284<br/>ROCS: 0.40x<br/>(Insolvent)"]
+        W2_F --> W2_R["Net EV: -USD 0.284<br/>ROCS: 0.40x<br/>(Insolvent)"]
     end
 
     subgraph Web3_Economics["Web3 Smart Contract Model"]
-        W3_C[Compute Cost: $14.20] --> W3_P[Expected Payout: $18,500]
+        W3_C[Compute Cost: USD 14.20] --> W3_P[Expected Payout: USD 18,500]
         W3_P --> W3_F[Hit Rate: 2.230%]
-        W3_F --> W3_R["Net EV: +$398.26<br/>ROCS: 14.30x<br/>(Exponential)"]
+        W3_F --> W3_R["Net EV: +USD 398.26<br/>ROCS: 14.30x<br/>(Exponential)"]
     end
 
     style Web2_Economics fill:#450a0a,stroke:#f87171,stroke-width:2px,color:#f8fafc
@@ -193,9 +193,9 @@ $$\text{Cost per Accepted Bounty} = \frac{\text{Token Cost per Target}}{P(\text{
    - $P(\text{unique}) = 0.150$ (85% duplicate rate)
    - $P(\text{accepted}) = 0.250$ (75% rejected as Informative/Not Applicable)
    - Joint Probability $P(\text{reward}) = 0.65 \times 0.03 \times 0.15 \times 0.25 = 0.00073125$ (1 out of every 1,367 targets)
-   - Token & Sandbox Cost per Target = $0.504
+   - Token & Sandbox Cost per Target = \$0.504
    - **Cost per Accepted Vulnerability** = $\frac{\$0.504}{0.00073125} = \mathbf{\$689.23}$
-   - Realized Median Payout = **$300.00**
+   - Realized Median Payout = **\$300.00**
    - **Net Profit per Accepted Vulnerability** = $\$300.00 - \$689.23 = \mathbf{-\$389.23}$ (Severe Loss per successful find)
 
 2. **Web3 Machine-Verifiable Reality**:
@@ -204,19 +204,19 @@ $$\text{Cost per Accepted Bounty} = \frac{\text{Token Cost per Target}}{P(\text{
    - $P(\text{unique}) = 0.650$ (35% duplicate rate on newly launched contracts/contests)
    - $P(\text{accepted}) = 0.980$ (deterministic Anvil PoC replay eliminates human triage pushback)
    - Joint Probability $P(\text{reward}) = 1.00 \times 0.035 \times 0.65 \times 0.98 = 0.022295$ (1 out of every 45 targets)
-   - Token & Sandbox Cost per Target = $14.20
+   - Token & Sandbox Cost per Target = \$14.20
    - **Cost per Accepted Vulnerability** = $\frac{\$14.20}{0.022295} = \mathbf{\$636.91}$
-   - Realized Median Payout = **$18,500.00**
+   - Realized Median Payout = **\$18,500.00**
    - **Net Profit per Accepted Vulnerability** = $\$18,500.00 - \$636.91 = \mathbf{+\$17,863.09}$ (Gross Margin: 96.5%)
 
 ### 5.2 Return on Compute Spend (ROCS) Formulation
 
 ROCS measures the financial productivity of every dollar consumed by silicon and tokens:
 
-$$\text{ROCS} = \frac{\text{Total Cumulative Realized Revenue}}{\text{Total Cumulative Compute \& Token Spend}}$$
+$$\text{ROCS} = \frac{\text{Total Cumulative Realized Revenue}}{\text{Total Cumulative Compute and Token Spend}}$$
 
-- In Web2, $\text{ROCS} = 0.40\times$. For every $1.00 invested in API tokens and cloud proxies, the system returns only $0.40, liquidating operator capital.
-- In Web3, $\text{ROCS} = 14.30\times$. For every $1.00 invested in deep fuzzing, formal SMT solvers, and frontier LLM reasoning, the system generates $14.30 in realized bounty rewards.
+- In Web2, $\text{ROCS} = 0.40\times$. For every \$1.00 invested in API tokens and cloud proxies, the system returns only \$0.40, liquidating operator capital.
+- In Web3, $\text{ROCS} = 14.30\times$. For every \$1.00 invested in deep fuzzing, formal SMT solvers, and frontier LLM reasoning, the system generates \$14.30 in realized bounty rewards.
 
 ---
 
@@ -232,11 +232,11 @@ sequenceDiagram
     participant Target as Smart Contract Target
     participant Platform as Immunefi / Protocol Escrow
 
-    Treasury->>Compute: Day 0: Outflow for Tokens & Fuzzing ($14.20)
+    Treasury->>Compute: Day 0: Outflow for Tokens & Fuzzing (USD 14.20)
     Compute->>Target: Day 0–1: Invariant Analysis & PoC Synthesis
     Target->>Platform: Day 1: Submit Cryptographic Proof-of-Concept
     Note over Platform: Triage & Verification Period<br/>Web3: 48h to 14 Days<br/>Web2: 45 to 60+ Days
-    Platform->>Treasury: Day 14: Settlement Inflow ($18,500 USDC)
+    Platform->>Treasury: Day 14: Settlement Inflow (USD 18,500 USDC)
     Note over Treasury: Cash Conversion Cycle Complete:<br/>Float Requirement = 14 Days
 ```
 
@@ -269,12 +269,12 @@ The present value ($PV$) of an accrued bounty receivable $B$ settled at time $t$
 
 $$PV = \frac{B}{(1 + r)^{t}} = B \cdot (1 + 0.15)^{-\frac{\text{DSO}}{365}}$$
 
-| Platform Archetype | Nominal Bounty ($) | Expected DSO (Days) | Annual Discount Rate ($r$) | Present Value $PV$ ($) | Timing Discount Drag ($) |
+| Platform Archetype | Nominal Bounty (\\$) | Expected DSO (Days) | Annual Discount Rate ($r$) | Present Value $PV$ (\\$) | Timing Discount Drag (\\$) |
 |---|---|---|---|---|---|
-| Web2 Bug Bounty | $1,000.00 | 60 days | 15.0% | $977.38 | -$22.62 (-2.26%) |
-| Web2 Enterprise VDP | $5,000.00 | 90 days | 15.0% | $4,830.42 | -$169.58 (-3.39%) |
-| Web3 Contest (Sherlock) | $3,500.00 | 7 days | 15.0% | $3,490.49 | -$9.51 (-0.27%) |
-| Web3 Bug Bounty (Immunefi) | $20,000.00 | 14 days | 15.0% | $19,895.83 | -$104.17 (-0.52%) |
+| Web2 Bug Bounty | \$1,000.00 | 60 days | 15.0% | \$977.38 | -\$22.62 (-2.26%) |
+| Web2 Enterprise VDP | \$5,000.00 | 90 days | 15.0% | \$4,830.42 | -\$169.58 (-3.39%) |
+| Web3 Contest (Sherlock) | \$3,500.00 | 7 days | 15.0% | \$3,490.49 | -\$9.51 (-0.27%) |
+| Web3 Bug Bounty (Immunefi) | \$20,000.00 | 14 days | 15.0% | \$19,895.83 | -\$104.17 (-0.52%) |
 
 In Web2, long settlement delays impose a 2.2% to 3.4% financial drag on capital productivity, compounding the negative EV problem. In Web3, the discount drag is negligible ($<0.5\%$).
 
@@ -290,13 +290,13 @@ For an opportunity $i$ with win probability $p_i$, gross payout odds $b_i = \fra
 
 $$f_i^* = \frac{p_i b_i - q_i}{b_i} = p_i - \frac{q_i}{b_i}$$
 
-To protect against parameter misestimation and fat-tailed drawdown shocks, the engine enforces a conservative **Quarter-Kelly ($0.25 f^*$)** rule:
+To protect against parameter misestimation and fat-tailed drawdown shocks, the engine enforces a conservative **Quarter-Kelly (\$0.25 f^*$)** rule:
 
 $$f_{\text{allocated}, i} = \max\left(0, 0.25 \times f_i^*\right)$$
 
 ### 7.2 Allocation Schedule across Competing Regimes
 
-| Target Asset Regime | Win Probability ($p_i$) | Payout Odds ($b_i$) | Full Kelly ($f_i^*$) | Quarter Kelly ($0.25 f_i^*$) | Portfolio Allocation Strategy |
+| Target Asset Regime | Win Probability ($p_i$) | Payout Odds ($b_i$) | Full Kelly ($f_i^*$) | Quarter Kelly (\$0.25 f_i^*$) | Portfolio Allocation Strategy |
 |---|---|---|---|---|---|
 | Web2 Low-Severity (XSS/CSRF) | 0.00073 | 594.2x | -0.00095 | **0.00%** | **HARD VETO (Zero compute dispatched)** |
 | Web2 Critical RCE | 0.00250 | 1,200.0x | +0.00167 | **0.04%** | Selective exploration only |
@@ -324,15 +324,15 @@ $$P_{\text{ruin}} \le 0.002 \quad (0.2\% \text{ empirical risk of exhaustion})$$
 ### 8.2 Monte Carlo Value at Risk (VaR) and Conditional VaR (CVaR)
 
 From 1,000 Monte Carlo trajectory runs executed over a 365-day operational horizon:
-- **Value at Risk ($\text{VaR}_{95}$)**: Across 95% of simulated trajectories, maximum cumulative drawdowns do not exceed **$1,250.00**.
-- **Conditional Value at Risk ($\text{CVaR}_{95}$)**: In the worst 5% tail scenarios (consecutive duplicate collisions or extended triage blackouts), expected cumulative drawdown averages **$1,850.00**.
-- **Recommended Minimum Reserve Floor**: Setting the liquid reserve floor at **$2,500.00** provides a $1.35\times$ coverage multiple over $\text{CVaR}_{95}$, guaranteeing that the engine survives extreme market stress shocks without requiring emergency recapitalization.
+- **Value at Risk ($\text{VaR}_{95}$)**: Across 95% of simulated trajectories, maximum cumulative drawdowns do not exceed **\$1,250.00**.
+- **Conditional Value at Risk ($\text{CVaR}_{95}$)**: In the worst 5% tail scenarios (consecutive duplicate collisions or extended triage blackouts), expected cumulative drawdown averages **\$1,850.00**.
+- **Recommended Minimum Reserve Floor**: Setting the liquid reserve floor at **\$2,500.00** provides a \$1.35\times$ coverage multiple over $\text{CVaR}_{95}$, guaranteeing that the engine survives extreme market stress shocks without requiring emergency recapitalization.
 
 ---
 
 ## 9. Conclusion: Strategic Roadmap for Capital Deployment
 
 The quantitative evidence establishes three definitive operational rules for the Autonomous Opportunity Arbitrage Engine:
-1. **Absolute Divestment from Web2 Public Bug Bounties**: With $\text{ROCS} = 0.40\times$ and negative unit economics (-$389.23 per accepted finding), public automated Web2 hunting is mathematically insolvent. All compute must be barred from uncurated Web2 scanning.
-2. **Capital Concentration in Web3 Machine-Verifiable Targets**: Operating with $\text{ROCS} = 14.30\times$ and positive net expected value (+$398.26 per evaluated target), Web3 smart contract research is the single mathematically sound domain for closed-loop autonomous exploitation.
-3. **Liquidity Self-Sufficiency via Negative CCC**: Because Web3 bounties settle within 3 to 14 days, the engine operates on a negative Cash Conversion Cycle (-19 days), allowing an initial deployment of $2,500 in working capital to compound into an institutional-grade research firm without debt financing or dilutive external equity.
+1. **Absolute Divestment from Web2 Public Bug Bounties**: With $\text{ROCS} = 0.40\times$ and negative unit economics (-\$389.23 per accepted finding), public automated Web2 hunting is mathematically insolvent. All compute must be barred from uncurated Web2 scanning.
+2. **Capital Concentration in Web3 Machine-Verifiable Targets**: Operating with $\text{ROCS} = 14.30\times$ and positive net expected value (+\$398.26 per evaluated target), Web3 smart contract research is the single mathematically sound domain for closed-loop autonomous exploitation.
+3. **Liquidity Self-Sufficiency via Negative CCC**: Because Web3 bounties settle within 3 to 14 days, the engine operates on a negative Cash Conversion Cycle (-19 days), allowing an initial deployment of \$2,500 in working capital to compound into an institutional-grade research firm without debt financing or dilutive external equity.

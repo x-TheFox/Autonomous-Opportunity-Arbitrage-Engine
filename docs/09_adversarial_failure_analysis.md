@@ -204,7 +204,7 @@ flowchart TD
   - *Heterogeneous Multi-Model Dialectic*: The Prover and Skeptic are instantiated using distinct model architectures (e.g., Anthropic Claude 3.5 Sonnet for exploit synthesis; OpenAI GPT-4o for adversarial challenge). This architectural heterogeneity prevents shared systematic blindspots.
   - *Independent Adversarial Contexts*: The Skeptic agent receives zero access to the Prover's private chain-of-thought scratchpad, evaluating only the final code artifact against strict falsification rules.
 - **Subsystem 12 (Deterministic Replay Sandbox)**:
-  - *The Binary Ground Truth Anchor*: LLM reasoning is never accepted as proof of vulnerability. A candidate finding is marked valid if and only if it compiles and executes within Subsystem 12 across three consecutive runs ($3\times$), producing a deterministic state assertion violation and a measurable economic balance shift ($\Delta \text{Balance} > 0$).
+  - *The Binary Ground Truth Anchor*: LLM reasoning is never accepted as proof of vulnerability. A candidate finding is marked valid if and only if it compiles and executes within Subsystem 12 across three consecutive runs (\$3\times$), producing a deterministic state assertion violation and a measurable economic balance shift ($\Delta \text{Balance} > 0$).
 
 ---
 
@@ -214,7 +214,7 @@ Because frontier LLM inference pricing scales linearly with input context and ou
 
 ### 5.1 Runaway Consumption Mechanics
 
-1. **Context Window Saturation on Large Codebases**: Modern decentralized finance protocols contain dozens of interconnected contracts spanning 30,000 to 100,000 lines of Solidity code. Ingesting full repositories into frontier context windows costs $3.00 to $10.00 per single prompt iteration, exhausting budgets within a few exploratory turns.
+1. **Context Window Saturation on Large Codebases**: Modern decentralized finance protocols contain dozens of interconnected contracts spanning 30,000 to 100,000 lines of Solidity code. Ingesting full repositories into frontier context windows costs \$3.00 to \$10.00 per single prompt iteration, exhausting budgets within a few exploratory turns.
 2. **Recursive Debugging Whirlpools**: If an agent encounters compilation or syntax errors while constructing an exploit, it may enter an unconstrained self-repair loop—repeatedly querying the LLM to fix minute errors without converging on a valid exploit.
 3. **Execution Runaway under High Concurrency**: Concurrently analyzing 20 opportunities without per-task budget isolation can exhaust the liquid treasury in hours during a period of model degradation.
 
@@ -223,11 +223,11 @@ flowchart LR
     subgraph Uncontrolled["Uncontrolled Recursive Execution (Capital Depletion)"]
         U1[Large Codebase Ingestion] --> U2[Full Context Exhaustion: 128k Tokens]
         U2 --> U3[Recursive Fix Loop: 50 Iterations]
-        U3 --> U4[Token Cost: $85.00 / Zero Exploit / Insolvent]
+        U3 --> U4[Token Cost: USD 85.00 / Zero Exploit / Insolvent]
     end
 
     subgraph AOAE_Bounded["AOAE Bounded Token Economics (S06, S09, S16)"]
-        B1[Target Work Order Assigned] --> B2[Subsystem 06: Hard Dollar Cap $15.00]
+        B1[Target Work Order Assigned] --> B2[Subsystem 06: Hard Dollar Cap USD 15.00]
         B2 --> B3[Subsystem 09: AST Pruning to 1,500 Tokens]
         B3 --> B4[Max 3 Debate Turns: Hard Stop]
         B4 --> B5[Subsystem 16: Immediate Kill Signal if Limit Exceeded]
@@ -240,13 +240,13 @@ flowchart LR
 ### 5.2 Architectural Mitigations Mapped to Subsystems
 
 - **Subsystem 06 (Portfolio Allocator) & Subsystem 16 (Accounting Ledger)**:
-  - *Hard Cap Work Orders*: Every opportunity dispatched receives an immutable token spend allowance calculated via Fractional Kelly sizing (typically $1.50 for triage; $15.00 for deep fuzzing/proving).
+  - *Hard Cap Work Orders*: Every opportunity dispatched receives an immutable token spend allowance calculated via Fractional Kelly sizing (typically \$1.50 for triage; \$15.00 for deep fuzzing/proving).
   - *Real-Time Telemetry Kill-Switch*: Subsystem 16 tracks token consumption on every API invocation. If cumulative spend reaches 100% of the assigned budget cap without producing a verifiable invariant violation, a hardware-level `KILL_SIGNAL` terminates execution immediately.
 - **Subsystem 09 (Context Window & Observation Compactor)**:
   - *Hierarchical AST Windowing*: Full repository codebases are never dumped into prompt contexts. Static analysis graphs (Slither/Semgrep) isolate vulnerable call paths, and Subsystem 09 extracts only the 15 lines of code directly surrounding the invariant breach locus.
   - *Observation Compression*: Compiler logs and fuzzer stack traces (often 20,000+ lines) are parsed deterministically, stripped of ANSI sequences, collapsed into single-line occurrence counts, and capped at a maximum of 1,500 prompt tokens.
 - **Subsystem 17 (Learning Store)**:
-  - *Heuristic Failure Caching*: Embeddings of failed exploit templates are stored in vector memory. When the Execution Planner considers a candidate attack path, it queries past failures; paths with high cosine similarity ($> 0.88$) to confirmed dead ends are pruned before generating prompts.
+  - *Heuristic Failure Caching*: Embeddings of failed exploit templates are stored in vector memory. When the Execution Planner considers a candidate attack path, it queries past failures; paths with high cosine similarity (\$> 0.88) to confirmed dead ends are pruned before generating prompts.
 
 ---
 
@@ -329,12 +329,12 @@ The following matrix documents the specific failure vectors, defensive mechanics
 | **Subsystem 09**: Context Compactor | Context Saturation & Token Inflation | Deterministic token pruning, ANSI strip, AST localization | Caps compacted summary context to 1,500 tokens | Writes raw logs to disk; emits truncated core context |
 | **Subsystem 10**: Hypothesis Prover | Flawed Exploit Logic / Sycophantic Drift | Synthesizes standalone, unprivileged, atomic test files | Must submit to independent adversarial cross-examination | Retries alternative exploit hypothesis up to 2 attempts |
 | **Subsystem 11**: Adversarial Skeptic | False-Positive Submissions & Collusion | Hostile red-team prompt persona with zero Prover scratchpad access | Falsification gates enforce mathematical proof of invalidity | Rejection halts pipeline, saving packaging and submission spend |
-| **Subsystem 12**: Replay Sandbox | Flaky / Non-Deterministic PoCs | Triple execution protocol ($3\times$) on clean Anvil forks | Pristine container deployed per run; zero shared state | If any single run fails, candidate PoC is dropped |
+| **Subsystem 12**: Replay Sandbox | Flaky / Non-Deterministic PoCs | Triple execution protocol (\$3\times$) on clean Anvil forks | Pristine container deployed per run; zero shared state | If any single run fails, candidate PoC is dropped |
 | **Subsystem 13**: Packaging Engine | Formatting Rejections & Scope Misunderstandings | Standardized Immunefi / HackerOne advisory schema builder | Schema validator rejects non-compliant markdown structures | Re-compiles report using platform-specific fallback template |
 | **Subsystem 14**: Submission Gateway | Egress Ban Waves & PGP Delivery Failures | PGP encryption + dedicated residential egress + MFA fallback hook | Quarantines failed submissions without exposing credentials | Dispatches webhook to human operator for MFA/CAPTCHA |
 | **Subsystem 15**: Triage Negotiation | Deflated Severity & Unfair Report Rejections | Deterministic code-backed rebuttals citing Anvil state traces | Constrained strictly to test citations; human sign-off on disputes | Escalates to human operator if dispute exceeds 2 rounds |
 | **Subsystem 16**: Accounting Ledger | Crypto Volatility & Sanctioned Taint | Real-time mark-to-market accounting + OFAC screening | Freezes settlement on sanctioned or high-taint funds | Quarantines wallet; automates USDC conversion via DEX |
-| **Subsystem 17**: Learning Store | Repetitive Failure Exploration / Model Drift | Vector heuristic memory of failed attempts (cosine sim $> 0.88$) | Bounded learning rate ($\eta = 0.05$) to prevent overfitting | Requires $N \ge 20$ samples before modifying global priors |
+| **Subsystem 17**: Learning Store | Repetitive Failure Exploration / Model Drift | Vector heuristic memory of failed attempts (cosine sim \$> 0.88) | Bounded learning rate ($\eta = 0.05$) to prevent overfitting | Requires $N \ge 20$ samples before modifying global priors |
 
 ---
 

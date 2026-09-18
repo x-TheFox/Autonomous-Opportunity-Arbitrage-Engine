@@ -78,7 +78,7 @@ The following matrix maps all 25 features from `PROJECT.md` to specific test sui
 | **F17** | 3-Tier Financial Schedules | `test_documentation_integrity.py` | `TestTier4DomainIntegrityScenarios` | `test_tier4_3_tier_financial_schedules_integrity` |
 | **F18** | Interactive Monte Carlo Simulator | `test_simulator.py` | `TestTier1FeatureCoverage`, `TestTier2BoundaryAndCornerCases` | `test_tier1_cli_default_run`, `test_tier1_cli_output_json_schema`, `test_tier2_zero_budget`, `test_tier2_100_percent_duplicate_rate` |
 | **F19** | Adversarial Threat Model & Mitigations | `test_documentation_integrity.py` | `TestTier1DocStructureAndExistence` | `test_tier1_doc_09_adversarial_analysis_structure` |
-| **F20** | 30-Day $250 Minimum Viable Experiment | `test_simulator.py` | `TestTier4RealWorldScenarios` | `test_tier4_30_day_250_dollar_mve_simulation` |
+| **F20** | 30-Day \$250 Minimum Viable Experiment | `test_simulator.py` | `TestTier4RealWorldScenarios` | `test_tier4_30_day_250_dollar_mve_simulation` |
 | **F21** | Quantitative Go/No-Go Decision Gates | `test_documentation_integrity.py` | `TestTier4DomainIntegrityScenarios` | `test_tier4_mve_decision_gates_integrity` |
 | **F22** | Master Executive Gateway (README.md) | `test_documentation_integrity.py` | `TestTier1DocStructureAndExistence` | `test_tier1_readme_structure` |
 | **F23** | Programmatic Vector Graphics (`assets/`) | `test_documentation_integrity.py` | `TestTier3CrossFeatureLinksAndVisualIntegrity` | `test_tier3_svg_assets_xml_validity`, `test_tier3_svg_assets_referenced_in_docs` |
